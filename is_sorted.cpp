@@ -3,9 +3,15 @@
 
 using namespace std;
 
-// Incomplete stub to simulate initial test failure
 bool isSorted(const int* arr, const int size) {
-    return false; // Will fail for sorted arrays
+    if (size <= 1) return true;
+
+    for (int i = 0; i < size - 1; i++) {
+        if (arr[i] > arr[i + 1]) {
+            return false;
+        }
+    }
+    return true;
 }
 
 // 1. Sorted array
