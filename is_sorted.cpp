@@ -3,16 +3,9 @@
 
 using namespace std;
 
-// Actual function implementation
+// Incomplete stub to simulate initial test failure
 bool isSorted(const int* arr, const int size) {
-    if (size <= 1) return true;
-
-    for (int i = 0; i < size - 1; i++) {
-        if (arr[i] > arr[i + 1]) {
-            return false;
-        }
-    }
-    return true;
+    return false; // Will fail for sorted arrays
 }
 
 // 1. Sorted array
@@ -51,7 +44,7 @@ void testNegativeValues() {
     assert(isSorted(arr, 5) == true);
 }
 
-// 7. Custom Edge Case 1: Empty array / zero size
+// 7. Custom Edge Case 1: Empty array
 void testEmptyArray() {
     int arr[] = {};
     assert(isSorted(arr, 0) == true);
@@ -64,8 +57,7 @@ void testAllIdenticalElements() {
 }
 
 int main() {
-    cout << "Running TDD test cases..." << endl;
-
+    cout << "Running tests..." << endl;
     testSortedArray();
     testUnsortedArray();
     testDuplicateValues();
@@ -74,7 +66,6 @@ int main() {
     testNegativeValues();
     testEmptyArray();
     testAllIdenticalElements();
-
-    cout << "All tests passed successfully!" << endl;
+    cout << "All tests passed!" << endl;
     return 0;
 }
