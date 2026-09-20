@@ -3,9 +3,16 @@
 
 using namespace std;
 
-// Stub function returning false to simulate initial test failure
+// Actual function implementation
 bool isSorted(const int* arr, const int size) {
-    return false; // Intentionally incomplete for TDD
+    if (size <= 1) return true;
+
+    for (int i = 0; i < size - 1; i++) {
+        if (arr[i] > arr[i + 1]) {
+            return false;
+        }
+    }
+    return true;
 }
 
 // 1. Sorted array
